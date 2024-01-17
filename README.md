@@ -2,7 +2,7 @@
 UARK CSCE 3513 - Software Engineering project
 
 <p align="center">
-   <img src="/res/splash.jpg"/>
+   <img src="https://github.com/cadedupont/photon/raw/main/res/splash.jpg"/>
 </p>
 
 # Details
