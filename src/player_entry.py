@@ -162,7 +162,7 @@ def on_f5(main_frame: tk.Tk, root: tk.Tk, users: Dict, network: Networking) -> N
 def build(root: tk.Tk, users: Dict, network: Networking) -> None:
     # Load the UI file and create the builder
     builder: pygubu.Builder = pygubu.Builder()
-    builder.add_from_file("src/ui/player_entry.ui")
+    builder.add_from_file("assets/ui/player_entry.ui")
 
     # Place the main frame in the center of the root window
     main_frame: tk.Frame = builder.get_object("master", root)

@@ -118,17 +118,17 @@ def update_timer(timer_label: tk.Label, seconds: int, root: tk.Tk, main_frame: t
 def build(network: Networking, users: Dict, root: tk.Tk) -> None:
     # Load the UI file and create the builder
     builder: pygubu.Builder = pygubu.Builder()
-    builder.add_from_file("src/ui/play_action.ui")
+    builder.add_from_file("assets/ui/play_action.ui")
 
     # Select random game music file
-    file = random.choice(os.listdir("res/moosic"))
+    file = random.choice(os.listdir("res/sounds/"))
 
     # Based on OS, play the game music
     # Play sound asynchronously to prevent freezing
     if os.name == "nt":
-        winsound.PlaySound("res/moosic/" + file, winsound.SND_ASYNC)
+        winsound.PlaySound("res/sounds/" + file, winsound.SND_ASYNC)
     else:
-        playsound.playsound("res/moosic/" + file, block=False)
+        playsound.playsound("res/sounds/" + file, block=False)
 
      # Place the main frame in the center of the root window
     main_frame: tk.Frame = builder.get_object("master", root)

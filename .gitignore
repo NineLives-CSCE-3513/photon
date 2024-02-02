@@ -1,11 +1,4 @@
-# Environment variables for storing sensitive database credentials
 .env
-
-# Python bytecode
-__pycache__/
-
-# VSC configuration folder
 .vscode/
-
-# Python virtual environment
-.venv/
+*.pyc
+**/__pycache__/

@@ -29,7 +29,7 @@ def build_root() -> tk.Tk:
     # If platform is not Linux, set state to zoomed and include icon
     if os.name != "posix":
         root.state("zoomed")
-        root.iconbitmap("res/logo.ico")
+        root.iconbitmap("assets/images/logo.ico")
 
     # Force window to fill screen, place at top left
     width: int = root.winfo_screenwidth()
@@ -43,14 +43,9 @@ def build_root() -> tk.Tk:
     return root
 
 def destroy_root(root: tk.Tk, network: Networking) -> None:
-    # Stop sounds from playing if on Windows
     if os.name == "nt":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-
-    # Close network sockets
     network.close_sockets()
-
-    # Destroy the root window
     root.destroy()
 
 def main() -> None:

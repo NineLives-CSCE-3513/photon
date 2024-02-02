@@ -1,76 +1,104 @@
 # Photon
-UARK CSCE 3513 - Software Engineering project
-
 <p align="center">
-   <img src="https://github.com/cadedupont/photon/raw/main/res/splash.jpg"/>
+   <img src="/assets/images/splash.jpg" width="100%" alt="Photon Logo">
 </p>
 
-# Details
-We will be recreating the control console for the popular Photon laser tag game. The console controls the major functionality of the game.
+Recreating the classic Photon laser tag system using modern technologies. This project was created for the Fall 2023 semester of the Software Engineering course at the University of Arkansas.
 
-# Prerequisites
-- Python 3
-- Tkinter
-- Supabase account and authentication credentials (visit the [supabase-py documentation](https://supabase.com/docs/reference/python/introduction) for more information)
-   - You should have a `.env` file in the root directory of the project with the following variables:
-      - `SUPABASE_URL` - the URL of your Supabase project
-      - `SUPABASE_KEY` - the public key of your Supabase project
-   - Make sure you have a table named `users` with an `id` column of type `int8` and a `username` column of type `text`
+## Download the Project
+You may either download the project as a ZIP or clone the repository to your local machine:
 
-# Major Components
-1. Player entry console with Supabase connection for entering and storing user information
-2. UDP connection for sending and receiving data from the Photon laser tag units
-3. GUI for displaying actions from units along with updating player and team scores
+```bash
+$ git clone https://github.com/NineLives-CSCE-3513/photon.git
+```
 
-# Run Instructions
-Open a terminal window and clone this repository to your local machine:
+Open 2 terminal windows and navigate to the project directory in both:
 
-`git clone https://github.com/cadedupont/photon.git`
+```bash
+$ cd /path/to/photon
+```
 
-Open 2 terminal windows and navigate to the root directory of the cloned repository in both.
-Note that `python` and `pip` are interchangable with `python3` and `pip3` - whichever command your machine utilizes for Python 3.
+## Setting Up Supabase Credentials
 
-## Running the traffic generator
+You will need to create a [Supabase](https://supabase.com/) account. Create a new project with a table named `users`. Once you have created a new project, navigate to the project settings and copy the `Project URL` and `service_role` key from the `API` tab. You will need to set these as environment variables on your local machine. Included is a `.env.example` with the following contents:
+
+```bash
+SUPABASE_URL='your_url_here'
+SUPABASE_KEY='your_key_here'
+```
+
+Rename the file to `.env` and replace the placeholder values with your Supabase project URL and service role key. The `.env` file is already included in the `.gitignore` file, so you don't have to worry about accidentally committing your credentials to version control.
+
+## Running the Traffic Generator
 Provided in the `src` directory is a file named `traffic_generator.py`. This file will generate UDP traffic to simulate the Photon laser tag units. In one of your terminal windows, run the following to start the traffic generator:
 
-`python src/traffic_generator.py`
+```bash
+$ python src/traffic_generator.py
+```
 
 The program will prompt you to enter 2 equipment IDs for each team. We recommend using 10 and 20 for the green team and 30 and 40 for the red team.
 
-## Running the main Photon program
-A Makefile is provided to simplify running the main program. In your second terminal window, run the following:
+## Running the Photon Program
+A Makefile is provided to simplify running the main program. If you wish, you can run the program manually using the following commands:
 
-Install the project's required dependencies:
+```bash
+$ pip install -r requirements.txt
+$ python src/main.py
+```
 
-`make init` or `pip install -r requirements.txt`
+Alternatively, you can use the provided Makefile:
 
-Run the main program:
+```bash
+$ make
+```
 
-`make run` or `python src/main.py`
+This will clean compiled bytecode files, install required dependencies, and run the main program. Run the following to display a menu of available commands:
 
-Clean up the project's generated files:
-
-`make clean` or `rm -rf src/__pycache__`
-
-Running `make` without any arguments will run `init`, `run`, and `clean` in that order. Or, running `make reset` will run `clean` and `init`.
+```bash
+$ make help
+```
 
 The player entry console will require using the `<tab>` key to switch between each field. When you've completed registering players for one team, use the mouse to select the other team's first equipment ID field and continue registering players. Click either the `Continue` button or press `<F5>` to finalize player registration and continue to the countdown screen. Press `<F12>` while still in the player entry console to clear all player entries.
 
 Make sure that the equipment IDs you entered in the traffic generator match the ones you entered in the player entry console.
 
-# Screenshots:
-<p align="center">
-   <img width=800px src="https://github.com/cadedupont/photon/assets/98860495/84c119e4-2a8c-46d4-8211-1de6e134f328"><br>
-   <img width=800px src="https://github.com/cadedupont/photon/assets/98860495/463e9643-5aac-4f93-a45a-d17e6f48d3ee"><br>
-   <img width=800px src="https://github.com/cadedupont/photon/assets/98860495/87e2d5c5-1083-43fe-8a02-ea62434ecdcf"><br>
-</p>
-
 # Contributors:
-|      Name         |        GitHub Handle                  |
-|:-----------------:|:------------------------------------:|
-|   Thomas Buser    | [tjbuser](https://github.com/tjbuser)|
-| Sophia Forrester  |[asophiaforrester](https://github.com/asophiaforrester)|
-|   Cade DuPont     | [cadedupont](https://github.com/cadedupont)|
-|  Grace Schmidt    |[GraceSchmidt1](https://github.com/GraceSchmidt1)|
-| Uyen Thi My Ho    |   [uho2003](https://github.com/uho2003)|
-|   Vishal Jeyam    |    [vjeyam](https://github.com/vjeyam)|
+<style>
+   td {
+      text-align: center;
+   }
+</style>
+<table>
+   <thead>
+      <tr>
+            <th>Name</th>
+            <th>GitHub Username</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+            <td>Thomas Buser</td>
+            <td><a href="https://github.com/tjbuser">tjbuser</a></td>
+      </tr>
+      <tr>
+            <td>Sophia Forrester</td>
+            <td><a href="https://github.com/asophiaforrester">asophiaforrester</a></td>
+      </tr>
+      <tr>
+            <td>Cade DuPont</td>
+            <td><a href="https://github.com/cadedupont">cadedupont</a></td>
+      </tr>
+      <tr>
+            <td>Grace Schmidt</td>
+            <td><a href="https://github.com/GraceSchmidt1">GraceSchmidt1</a></td>
+      </tr>
+      <tr>
+            <td>Uyen Thi My Ho</td>
+            <td><a href="https://github.com/uho2003">uho2003</a></td>
+      </tr>
+      <tr>
+            <td>Vishal Jeyam</td>
+            <td><a href="https://github.com/vjeyam">vjeyam</a></td>
+      </tr>
+   </tbody>
+</table>
