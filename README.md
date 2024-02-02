@@ -62,43 +62,41 @@ The player entry console will require using the `<tab>` key to switch between ea
 
 Make sure that the equipment IDs you entered in the traffic generator match the ones you entered in the player entry console.
 
-# Contributors:
-<style>
-   td {
-      text-align: center;
-   }
-</style>
+## Contributors:
 <table>
    <thead>
       <tr>
-            <th>Name</th>
-            <th>GitHub Username</th>
+            <th><p align="center">Name</p></th>
+            <th><p align="center">GitHub Username</p></th>
       </tr>
    </thead>
    <tbody>
       <tr>
-            <td>Thomas Buser</td>
-            <td><a href="https://github.com/tjbuser">tjbuser</a></td>
+            <td><p align="center">Thomas Buser</p></td>
+            <td><p align="center"><a href="https://github.com/tjbuser">tjbuser</a></p></td>
       </tr>
       <tr>
-            <td>Sophia Forrester</td>
-            <td><a href="https://github.com/asophiaforrester">asophiaforrester</a></td>
+            <td><p align="center">Sophia Forrester</p></td>
+            <td><p align="center"><a href="https://github.com/asophiaforrester">asophiaforrester</a></p></td>
       </tr>
       <tr>
-            <td>Cade DuPont</td>
-            <td><a href="https://github.com/cadedupont">cadedupont</a></td>
+            <td><p align="center">Grace Schmidt</p></td>
+            <td><p align="center"><a href="https://github.com/GraceSchmidt1">GraceSchmidt1</a></p></td>
       </tr>
       <tr>
-            <td>Grace Schmidt</td>
-            <td><a href="https://github.com/GraceSchmidt1">GraceSchmidt1</a></td>
+            <td><p align="center">Uyen Thi My Ho</p></td>
+            <td><p align="center"><a href="https://github.com/uho2003">uho2003</a></p></td>
       </tr>
       <tr>
-            <td>Uyen Thi My Ho</td>
-            <td><a href="https://github.com/uho2003">uho2003</a></td>
+            <td><p align="center">Vishal Jeyam</p></td>
+            <td><p align="center"><a href="https://github.com/vjeyam">vjeyam</a></p></td>
       </tr>
       <tr>
-            <td>Vishal Jeyam</td>
-            <td><a href="https://github.com/vjeyam">vjeyam</a></td>
+            <td><p align="center">Cade DuPont</p></td>
+            <td><p align="center"><a href="https://github.com/cadedupont">cadedupont</a></p></td>
       </tr>
    </tbody>
 </table>
+
+## License
+This project is licensed under the [MIT License](LICENSE).
