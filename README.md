@@ -62,6 +62,11 @@ The player entry console will require using the `<tab>` key to switch between ea
 
 Make sure that the equipment IDs you entered in the traffic generator match the ones you entered in the player entry console.
 
+## Screenshots:
+<img src="https://github.com/NineLives-CSCE-3513/photon/assets/98860495/8116f404-ed5f-4314-9ec5-ddfed8dd7004" width="100%" />
+<img src="https://github.com/NineLives-CSCE-3513/photon/assets/98860495/d50b8491-7db9-4558-a1be-204d32440324" width="100%" />
+<img src="https://github.com/NineLives-CSCE-3513/photon/assets/98860495/c1aa6bf0-32d6-40f5-8b46-2cce0f39a661" width="100%" />
+
 ## Contributors:
 <table>
    <thead>
