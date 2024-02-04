@@ -38,8 +38,6 @@ def build_root() -> tk.Tk:
 
     # Disable resizing
     root.resizable(False, False)
-
-    # Return the root window
     return root
 
 def destroy_root(root: tk.Tk, network: Networking) -> None:

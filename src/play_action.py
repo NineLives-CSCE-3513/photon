@@ -72,11 +72,11 @@ def update_stream(game: GameState, action_stream: tk.Frame) -> None:
         # Add B to player name if they hit a base
         if "hit green base" in event:
             for user in game.red_users:
-                if user.username == player_name:
+                if user.username == player_name and "B: " not in user.username:
                     user.username = "B: " + user.username
         elif "hit red base" in event:
             for user in game.green_users:
-                if user.username == player_name:
+                if user.username == player_name and "B: " not in user.username:
                     user.username = "B: " + user.username
         
         # Remove the last event from the bottom of the action stream
@@ -148,5 +148,5 @@ def build(network: Networking, users: Dict, root: tk.Tk) -> None:
     update_timer(timer_label, 360, root, main_frame, users, network, game)
 
     # Start thread for UDP listening
-    game_thread: threading.Thread = threading.Thread(target=network.run_game, args=(game,), daemon = True)
+    game_thread: threading.Thread = threading.Thread(target=network.run_game, args=(game,), daemon=True)
     game_thread.start()
