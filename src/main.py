@@ -23,15 +23,8 @@ def build_root() -> tk.Tk:
     root.title("Photon")
     root.configure(background="white")
 
-    # If platform is not Linux, set state to zoomed and include icon
-    if os.name != "posix":
-        root.state("zoomed")
-        root.iconbitmap("assets/images/logo.ico")
-
-    # Force window to fill screen, place at top left
-    width: int = root.winfo_screenwidth()
-    height: int = root.winfo_screenheight()
-    root.geometry(f"{width}x{height}+0+0")
+    # Set window size to fullscreen
+    root.attributes("-fullscreen", True)    
 
     # Disable resizing
     root.resizable(False, False)
