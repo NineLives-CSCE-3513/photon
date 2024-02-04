@@ -5,6 +5,8 @@
 
 Recreating the classic Photon laser tag system using modern technologies. This project was created for the Fall 2023 semester of the Software Engineering course at the University of Arkansas.
 
+This `main` branch should support MacOS and Windows. For Linux users, a [`linux-support`](https://github.com/NineLives-CSCE-3513/photon/tree/linux-support) branch is included which removes sounds from the game.
+
 ## Download the Project
 You may either download the project as a ZIP or clone the repository to your local machine:
 
@@ -62,12 +64,12 @@ The player entry console will require using the `<tab>` key to switch between ea
 
 Make sure that the equipment IDs you entered in the traffic generator match the ones you entered in the player entry console.
 
-## Screenshots:
+## Screenshots
 <img src="https://github.com/NineLives-CSCE-3513/photon/assets/98860495/8116f404-ed5f-4314-9ec5-ddfed8dd7004" width="100%" />
 <img src="https://github.com/NineLives-CSCE-3513/photon/assets/98860495/d50b8491-7db9-4558-a1be-204d32440324" width="100%" />
 <img src="https://github.com/NineLives-CSCE-3513/photon/assets/98860495/c1aa6bf0-32d6-40f5-8b46-2cce0f39a661" width="100%" />
 
-## Contributors:
+## Contributors
 <table>
    <thead>
       <tr>
