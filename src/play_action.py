@@ -10,12 +10,6 @@ from game_logic import GameState
 from main import destroy_root
 import player_entry
 
-# If on Windows, import winsound, else import playsound for countdown music
-if os.name == "nt":
-    import winsound
-else:
-    import playsound
-
 def build_new_game(root: tk.Tk, users: Dict, network: Networking) -> None:
     # Remove buttons from window
     for widget in root.winfo_children():
@@ -27,12 +21,6 @@ def build_new_game(root: tk.Tk, users: Dict, network: Networking) -> None:
 def destroy_current_game(root: tk.Tk, main_frame: tk.Frame, users: dict, network: Networking, game: GameState) -> None:
     # Destroy the main frame
     main_frame.destroy()
-
-    # Stop playing game music
-    if os.name == "nt":
-        winsound.PlaySound(None, winsound.SND_ASYNC)
-    else:
-        playsound.playsound(None, block=False)
 
     # Create label for displaying winning team
     winner: str
@@ -119,16 +107,6 @@ def build(network: Networking, users: Dict, root: tk.Tk) -> None:
     # Load the UI file and create the builder
     builder: pygubu.Builder = pygubu.Builder()
     builder.add_from_file("assets/ui/play_action.ui")
-
-    # Select random game music file
-    file = random.choice(os.listdir("res/sounds/"))
-
-    # Based on OS, play the game music
-    # Play sound asynchronously to prevent freezing
-    if os.name == "nt":
-        winsound.PlaySound("res/sounds/" + file, winsound.SND_ASYNC)
-    else:
-        playsound.playsound("res/sounds/" + file, block=False)
 
      # Place the main frame in the center of the root window
     main_frame: tk.Frame = builder.get_object("master", root)

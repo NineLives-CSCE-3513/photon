@@ -7,12 +7,6 @@ import pygubu
 
 from networking import Networking
 
-# If on Windows, import winsound, else import playsound for countdown music
-if os.name == "nt":
-    import winsound
-else:
-    import playsound
-
 def update_timer(timer_label: tk.Label, seconds: int, main_frame: tk.Frame, network: Networking, users: Dict, root: tk.Tk) -> None:
     # Update text being displayed in timer label
     timer_label.config(text=f"Game Starts In: {seconds} Seconds")
@@ -50,13 +44,6 @@ def build(root: tk.Tk, users: Dict, network: Networking) -> None:
     # Load the UI file and create the builder
     builder: pygubu.Builder = pygubu.Builder()
     builder.add_from_file("assets/ui/countdown.ui")
-
-    # Based on OS, play the countdown sound
-    # Play sound asynchronously to prevent freezing
-    if os.name == "nt":
-        winsound.PlaySound("assets/sounds/countdown.wav", winsound.SND_ASYNC)
-    else:
-        playsound.playsound("assets/sounds/countdown.wav", block=False)
 
     # Place the main frame in the center of the root window
     main_frame: tk.Frame = builder.get_object("master", root)

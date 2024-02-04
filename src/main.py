@@ -10,9 +10,6 @@ from game_logic import GameState
 import splash_screen
 import player_entry
 
-if os.name == "nt":
-    import winsound
-
 # Create the Supabase client
 load_dotenv()
 supabase_client: supabase.Client = supabase.create_client(
@@ -41,8 +38,6 @@ def build_root() -> tk.Tk:
     return root
 
 def destroy_root(root: tk.Tk, network: Networking) -> None:
-    if os.name == "nt":
-        winsound.PlaySound(None, winsound.SND_ASYNC)
     network.close_sockets()
     root.destroy()
 
